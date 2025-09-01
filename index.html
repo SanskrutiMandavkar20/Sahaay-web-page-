@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAHAAY - Issue Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Login Section -->
+    <section id="login-section" class="page-section">
+      <h1>SAHAAY Login</h1>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <div id="login-error" class="error-msg"></div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-section" class="page-section hidden">
+      <header>
+        <h2>Dashboard</h2>
+        <button id="logout-btn">Logout</button>
+      </header>
+
+      <!-- Filters -->
+      <div class="filter-container">
+        <input type="text" id="filter-location" placeholder="Filter by Location" />
+        <select id="filter-type">
+          <option value="">Filter by Type</option>
+          <option value="pothole">Pothole</option>
+          <option value="garbage">Garbage</option>
+          <option value="streetlight">Streetlight</option>
+        </select>
+        <select id="filter-status">
+          <option value="">Filter by Status</option>
+          <option value="open">Open</option>
+          <option value="assigned">Assigned</option>
+          <option value="resolved">Resolved</option>
+        </select>
+        <button id="apply-filters-btn">Apply Filters</button>
+      </div>
+
+      <!-- Issues List -->
+      <div id="issues-list" class="issues-list">
+        <!-- dynamically populated -->
+      </div>
+
+      <!-- Issue Details and Actions -->
+      <div id="issue-details" class="hidden">
+        <h3>Issue Details</h3>
+        <img id="issue-photo" alt="Issue Photo" />
+        <p><strong>Location:</strong> <span id="issue-location"></span></p>
+        <p><strong>Description:</strong> <span id="issue-desc"></span></p>
+
+        <div>
+          <label for="assign-team">Assign to Department/Team:</label>
+          <select id="assign-team">
+            <option value="">Select Team</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="sanitation">Sanitation</option>
+            <option value="lighting">Lighting</option>
+          </select>
+          <button id="assign-btn">Assign</button>
+        </div>
+
+        <div>
+          <label for="update-status">Update Status:</label>
+          <select id="update-status">
+            <option value="open">Open</option>
+            <option value="assigned">Assigned</option>
+            <option value="resolved">Resolved</option>
+          </select>
+          <button id="update-status-btn">Update Status</button>
+        </div>
+
+        <div>
+          <h4>Resolution Update</h4>
+          <label>
+            <input type="checkbox" id="mark-resolved" /> Mark as Resolved
+          </label>
+          <input type="file" id="resolution-proof" />
+          <button id="save-resolution-btn">Save Resolution</button>
+        </div>
+
+        <button id="back-to-list-btn">Back to List</button>
+      </div>
+
+      <!-- Analytics Section -->
+      <section id="analytics-section" class="hidden">
+        <h3>Analytics</h3>
+        <ul>
+          <li><strong>Average Response Time:</strong> <span id="response-time">3.4 hours</span></li>
+          <li><strong>Hotspot Detection:</strong> <span id="hotspot">Area 5</span></li>
+          <li><strong>Performance Reports:</strong> <span id="performance">Good</span></li>
+        </ul>
+      </section>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

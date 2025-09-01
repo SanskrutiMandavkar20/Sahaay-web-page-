@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.page-section {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+button,
+input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0 1.2rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  background: #764ba2;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #5a3781;
+}
+
+#logout-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 0.3rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-msg {
+  color: #f44336;
+  font-weight: bold;
+  margin-top: -1rem;
+}
+
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.issues-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #764ba2;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+}
+
+.issue-item {
+  background: #4a307f;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  transition: background 0.2s ease;
+}
+
+.issue-item:hover {
+  background: #6d4e9f;
+}
+
+#issue-photo {
+  max-width: 100%;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.5rem;
+}
+
+section#analytics-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section#analytics-section li {
+  background: #4a307f;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
